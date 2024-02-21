@@ -1,17 +1,15 @@
 "use client"
 
 import { Header } from "@/components/Header";
-import { CountProvider } from "@/contexts/CountContext";
-import { useState } from "react";
+import { LoggedUserProvider } from "@/contexts/LoggedUser";
 
 const Page = () => {
   return (
-    <div className="mx-auto max-w-lg ">
-      <CountProvider>
+    <div className="mx-auto">
+      <LoggedUserProvider >
         <Header />
-      </CountProvider>
-
-    </div>
+      </LoggedUserProvider>
+    </div >
   )
 }
 export default Page;     
